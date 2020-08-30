@@ -1,8 +1,5 @@
 package ru.job4j;
 
-import java.security.Principal;
-import java.util.DoubleSummaryStatistics;
-
 public class Multiple {
     public static void main(String[] args) {
         System.out.println("1 * 2 = 2");
