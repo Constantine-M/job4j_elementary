@@ -1,5 +1,7 @@
 package ru.job4j.calculator;
 
+import java.beans.PropertyEditorSupport;
+
 public class Calculator {
     public static void main(String[] args) {
         int one = 1;
@@ -14,6 +16,14 @@ public class Calculator {
         int fourTimeTwo = four * two;
         System.out.println(sixDivTwo);
         System.out.println(fiveMinusTwo);
-        System.out.print(fourTimeTwo);
+        System.out.println(fourTimeTwo);
+        one = 10;
+        two = 11;
+        onePlusTwo = one + two;
+        System.out.println(onePlusTwo);
+        int size = 10;
+        size = 100;
+        size = size - 5;
+        System.out.println(size);
     }
 }
