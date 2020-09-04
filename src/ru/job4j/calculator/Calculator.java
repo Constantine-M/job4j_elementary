@@ -1,7 +1,5 @@
 package ru.job4j.calculator;
 
-import java.beans.PropertyEditorSupport;
-
 public class Calculator {
     public static void main(String[] args) {
         int one = 1;
