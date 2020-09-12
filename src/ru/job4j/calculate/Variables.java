@@ -23,7 +23,5 @@ public class  Variables {
         double size = 14895.1844951959;
         System.out.println(size);
 
-
-
     }
 }

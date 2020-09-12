@@ -36,10 +36,10 @@ public class Converter {
         int euro = Converter.rubleToEuro(140);
         System.out.println("140 rubles are " + euro + " euro.");
         double dollar = Converter.rubleToDollar(140);
-        String dollarmod = String.format("%.2f",dollar);
+        String dollarmod = String.format("%.2f", dollar);
         System.out.println("140 rubles are " + dollarmod + " dollar.");
         double dollareu = Converter.dollarToEuro(1);
-        String dollareumod = String.format("%.2f",dollareu);
+        String dollareumod = String.format("%.2f", dollareu);
         System.out.println("1 dollar costs " + dollareumod + " euro.");
         int dollarru = Converter.dollarToRuble(1);
         System.out.println("1 dollar costs " + dollarru + " rubles.");

@@ -18,7 +18,7 @@ public class Fit {
         System.out.println("Man 187 is " + man);
         height = 173;
         double woman = Fit.womanWeight(height);
-        String womanmod = String.format("%.2f",woman);
+        String womanmod = String.format("%.2f", woman);
         System.out.println("Woman 173 is " + womanmod);
     }
 }
