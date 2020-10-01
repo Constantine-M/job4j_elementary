@@ -12,7 +12,7 @@ public class Converter {
     }
 
     public static double dollarToEuro(double value) {
-        double rsl = value / 0.85;
+        double rsl = value * 0.85;
         return rsl;
     }
 
@@ -57,10 +57,10 @@ public class Converter {
         boolean passed1 = expected1 == out1;
         System.out.println("140 rubles are 2.3333333333333335. Test result: " + passed1);
         double in2 = 1;
-        double expected2 = 1.1764705882352942;
+        double expected2 = 0.85;
         double out2 = Converter.dollarToEuro(in2);
         boolean passed2 = expected2 == out2;
-        System.out.println("1 dollar costs 1.1764705882352942. Test result: " + passed2);
+        System.out.println("1 dollar costs 0.85. Test result: " + passed2);
         int in3 = 1;
         int expected3 = 60;
         int out3 = Converter.dollarToRuble(in3);
