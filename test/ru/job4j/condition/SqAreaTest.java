@@ -1,17 +1,27 @@
 package ru.job4j.condition;
 
 import org.junit.Test;
-import org.junit.Assert;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class SqAreaTest {
 
     @Test
     public void whenP6K2Then2() {
-        int p = 6;
-        int k = 2;
-        int expected = 2;
+        double p = 6;
+        double k = 2;
+        double expected = 2;
         double out = SqArea.square(p, k);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(out, is(expected));
+    }
+
+    @Test
+    public void whenP4K1Then1() {
+        double p = 4;
+        double k = 1;
+        double expected = 1;
+        double out = SqArea.square(4, 1);
+        assertThat(out, is(expected));
     }
 
     @Test
@@ -20,7 +30,7 @@ public class SqAreaTest {
         double k = 0;
         double expected = 0;
         double out = SqArea.square(p, k);
-        Assert.assertEquals(expected, out, 0.1);
+        assertThat(out, is(expected));
     }
 
     @Test
@@ -29,6 +39,6 @@ public class SqAreaTest {
         double k = 4;
         double expected = 0.36;
         double out = SqArea.square(p, k);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(out, is(expected));
     }
 }
