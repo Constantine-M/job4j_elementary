@@ -6,7 +6,7 @@ public class GameDice {
         if (percent * prize > pay) {
             result = (percent * prize) - pay;
         } else {
-            if ((percent * prize) - pay <= 0) {
+            if (((percent * prize) - pay) <= 0) {
                result = 0;
             }
         }
@@ -15,6 +15,6 @@ public class GameDice {
 
     public static void main(String[] args) {
         System.out.println(checkGame(0.1, 90, 9));
-        System.out.println(checkGame(0.9, 1, 2));
+        System.out.println(checkGame(0.2, 50, 2));
     }
 }
