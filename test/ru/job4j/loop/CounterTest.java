@@ -29,4 +29,10 @@ public class CounterTest {
         int rsl = Counter.sumByEven(1, 1);
         assertThat(rsl, is(0));
     }
+
+    @Test
+    public void sumByEvenFromOneToFiveThenSix() {
+        int rsl = Counter.sumByEven(1, 5);
+        assertThat(rsl, is(6));
+    }
 }

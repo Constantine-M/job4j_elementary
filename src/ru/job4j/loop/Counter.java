@@ -14,7 +14,7 @@ public class Counter {
         int sum = 0;
         int i = start;
         for (i = start; i <= finish; i++) {
-            if (i % 2 == 0 && finish % 2 == 0) {
+            if (i % 2 == 0) {
                 sum = sum + i;
             }
         }
