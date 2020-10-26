@@ -23,4 +23,10 @@ public class FitnessTest {
         int rsl = Fitness.calc(50, 90);
         assertThat(rsl, is(2));
     }
+
+    @Test
+    public void whenIvanEqualNik() {
+        int rsl = Fitness.calc(90, 90);
+        assertThat(rsl, is(1));
+    }
 }
