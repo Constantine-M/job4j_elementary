@@ -19,9 +19,12 @@ public class SweetPriceTest {
         assertThat(out.toString(), is(
                 "10" + ln
                         +
-                        "20" + ln +
-                        "30" + ln +
-                        "40" + ln +
+                        "20" + ln
+                        +
+                        "30" + ln
+                        +
+                        "40" + ln
+                        +
                         "50" + ln
         ));
     }
