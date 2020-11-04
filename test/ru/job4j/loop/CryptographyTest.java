@@ -21,7 +21,7 @@ public class CryptographyTest {
     @Test
     public void codeEmptyString() {
         String code = Cryptography.code("");
-        assertThat(code, is("Empty"));
+        assertThat(code, is("empty"));
     }
 
     @Test
