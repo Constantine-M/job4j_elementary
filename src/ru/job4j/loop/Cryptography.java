@@ -6,7 +6,7 @@ public class Cryptography {
             return "empty";
         }
         StringBuilder word = new StringBuilder(s);
-        if (word.length() > 4) {
+        if (s.length() > 4) {
             for (int i = 0; i < word.length() - 4; i++) {
                 word.setCharAt(i, '#');
             }
