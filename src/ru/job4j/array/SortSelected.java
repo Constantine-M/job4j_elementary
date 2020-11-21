@@ -1,4 +1,4 @@
-package ru.job4j.array.;
+package ru.job4j.array;
 
 import ru.job4j.array.FindLoop;
 import ru.job4j.array.MinDiapason;
