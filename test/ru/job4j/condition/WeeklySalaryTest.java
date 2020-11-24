@@ -13,4 +13,25 @@ public class WeeklySalaryTest {
                 new int[] {8, 8, 9, 10, 8}),
                 is(445));
     }
+
+    @Test
+    public void whenWorkOnlyWeekend() {
+        assertThat(WeeklySalary.calculate(
+                new int[] {0, 0, 0, 0, 0, 9, 8}),
+                is(350));
+    }
+
+    @Test
+    public void whenWorkOnlyWeekdays() {
+        assertThat(WeeklySalary.calculate(
+                new int[] {8, 8, 8, 8, 8, 0, 0}),
+                is(400));
+    }
+
+    @Test
+    public void whenWorkWeekdaysAndWeekend() {
+        assertThat(WeeklySalary.calculate(
+                new int[] {10, 0, 12, 0, 8, 12, 4}),
+                is(690));
+    }
 }
