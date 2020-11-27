@@ -8,7 +8,7 @@ public class Matrix {
                 if (i > 0 && j > 0) {
                     table[i][j] = i * j;
                 } else {
-                    table[i][j] = table[i][j];
+                    table[i][j] = i + j;
                 }
             }
         }
