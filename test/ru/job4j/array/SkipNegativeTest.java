@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 public class SkipNegativeTest {
 
     @Test
-    public void skip() {
+    public void skipMinusTwo() {
         int[][] in = {
                 {1, -2},
                 {1, 2}

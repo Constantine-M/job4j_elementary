@@ -6,7 +6,7 @@ public class SkipNegative {
             for (int cell = 0; cell < array.length; cell++) {
                 if (array[row][cell] >= 0) {
 
-                } else {
+                } else  {
                     array[row][cell] = 0;
                 }
             }
