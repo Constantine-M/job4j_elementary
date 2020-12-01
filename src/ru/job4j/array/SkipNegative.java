@@ -2,16 +2,13 @@ package ru.job4j.array;
 
 public class SkipNegative {
     public static int[][] skip(int[][] array) {
-        int rsl[][] = new int[array.length][array.length];
         for (int row = 0; row < array.length; row++) {
             for (int cell = 0; cell < array.length; cell++) {
-                if (array[row][cell] >= 0) {
-                    rsl[row][cell] = array[row][cell];
-                } else {
-                    rsl[row][cell] = 0;
+                if (array[row][cell] < 0) {
+                    array[row][cell] = 0;
                 }
             }
         }
-        return rsl;
+        return array;
     }
 }
