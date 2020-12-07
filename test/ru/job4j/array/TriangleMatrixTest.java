@@ -14,4 +14,14 @@ public class TriangleMatrixTest {
         };
         assertThat(TriangleMatrix.rows(2), is(expect));
     }
+
+    @Test
+    public void whenRows3() {
+        int[][] expect = {
+                {1},
+                {2, 3},
+                {4, 5, 6}
+        };
+        assertThat(TriangleMatrix.rows(3), is(expect));
+    }
 }
