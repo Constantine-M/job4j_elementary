@@ -33,4 +33,18 @@ public class TranspositionTest {
         };
         assertArrayEquals(expect, Transposition.convert(input));
     }
+
+    @Test
+    public void whenNotSquare2() {
+        int[][] input = {
+                {1, 4},
+                {2, 5},
+                {3, 6}
+        };
+        int[][] expect = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+        assertArrayEquals(expect, Transposition.convert(input));
+    }
 }
