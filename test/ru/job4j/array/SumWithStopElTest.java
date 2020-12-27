@@ -19,4 +19,11 @@ public class SumWithStopElTest {
         int result = SumWithStopEl.count(data, 7);
         assertEquals(0, result);
     }
+
+    @Test
+    public void countNotEven1() {
+        int[] data = {1, 2, 3};
+        int result = SumWithStopEl.count(data, 5);
+        assertEquals(6, result);
+    }
 }
