@@ -5,7 +5,8 @@ public class MaxLengthSeria {
     public static int find(int[] array) {
         int[] counters = new int[array.length];
         int count = 1;
-        int j = 0; /*index for counters*/
+        /*index for counters*/
+        int j = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] <= array[i]) {
                 count++;
@@ -16,7 +17,7 @@ public class MaxLengthSeria {
             }
         }
         counters[j] = count;
-        //max length seria
+        /*max length seria*/
         int max = counters[0];
         for (int i = 0; i < counters.length; i++) {
             max = Math.max(max, counters[i]);
