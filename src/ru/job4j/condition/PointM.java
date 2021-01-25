@@ -3,22 +3,52 @@ package ru.job4j.condition;
 import java.lang.Math;
 import java.text.DecimalFormat;
 
+/**А что в этом задании является цельным объектом?
+ * Цельным объектом здесь будет точка в системе координат.
+ * То есть объект, который содержит координаты x и y.
+ * Поля это переменные принадлежащие конкретному объекту.
+ */
 public class PointM {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        double rsl = Math.sqrt((Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)));
+
+    /**Создадим поле для объекта "точка".
+     * Оно (поле) будет принадлежать конкретному объекту.
+     * Данное поле будет содержать в себе значение - одну из координат.
+     */
+    private int x;
+
+    /**Создадим поле для объекта "точка".
+     * Оно (поле) будет принадлежать конкретному объекту.
+     * Данное поле будет содержать в себе значение - одну из координат.
+     * Private - это модификатор доступа. Он определяет, откуда может быть прочитана и записана переменная.
+     */
+    private int y;
+
+    /**Создали конструктор. Данный класс (PointM) описывает точку.
+     * Теперь у наших объектов есть входные параметры - координаты х и у.
+     */
+    public PointM(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    /**Создадим метод, который будет принимать объект типа PointM.
+     * С помощью метода мы будем обращаться к тем или иным объектам
+     * с нужными координатами.*/
+    public double distance(PointM endpoint) {
+        double rsl = Math.sqrt((Math.pow((endpoint.x - this.x), 2) + Math.pow((endpoint.y - this.y), 2)));
         return rsl;
     }
 
+    /**Продемонстрируем взаимодействие объектов.
+     * Создадим 2 объекта (точки) с нужными координатами и
+     * посчитаем расстояние между ними.
+     */
     public static void main(String[] args) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        double result = PointM.distance(0, 0, 2, 0);
-        String resultm = decimalFormat.format(result);
-        System.out.println("result (0,0) to (2,0) " + resultm);
-        double result1 = Point.distance(-1, 2, -5, 5);
-        String result1m = decimalFormat.format(result1);
-        System.out.println("result1 (-1,2) to (-5,5) " + result1m);
-        double result2 = Point.distance(2, -3, -4, -1);
-        String result2m = decimalFormat.format(result2);
-        System.out.println("result2 (2,-3) to (-4,-1) " + result2m);
+        PointM begin = new PointM(0, 0);
+        PointM end = new PointM(2, 0);
+        double dist = begin.distance(end);
+        String distdec = decimalFormat.format(dist);
+        System.out.println("result (0,0) to (2,0) " + distdec);
     }
 }
