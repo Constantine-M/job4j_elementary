@@ -1,8 +1,11 @@
 package ru.job4j.condition;
 
-import org.junit.Ignore;
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
+
+import java.text.DecimalFormat;
+
+import static org.hamcrest.Matchers.closeTo;
 
 
 public class PointMTest {
@@ -32,5 +35,18 @@ public class PointMTest {
         double expected = 6.32;
         double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
+    }
+
+    /**Сначала считал в онлайн калькуляторе, а потом тут.
+     * Все сошлось. Тест написан верно.
+     */
+    @Test
+    public void when251To410() {
+        PointM a = new PointM(2, 5, 1);
+        PointM b = new PointM(-4, -1, 0);
+        DecimalFormat decimal = new DecimalFormat("#.###");
+        double expected = 8.5;
+        double out = a.distance3d(b);
+        Assert.assertEquals(expected, out, 0.5);
     }
 }
