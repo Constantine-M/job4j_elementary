@@ -27,8 +27,6 @@ public class Max {
     }
 
     public int max(int first, int second, int third, int fourth) {
-        int temp = max(second, max(third, fourth));
-        int rsl = max(first, temp);
-        return rsl;
+        return max(first, max(second, max(third, fourth)));
     }
 }
